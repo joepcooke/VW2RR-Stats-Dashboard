@@ -1,5 +1,5 @@
 ---
-title: "data clean script (markdown)"
+title: "VW2RR Dataset Cleaning Script"
 author: "Joe Cooke"
 date: "2026-02-27"
 output: html_document
@@ -7,8 +7,7 @@ output: html_document
 
 ```{r}
 
-#moved this over to a markdown file from a regular r script, I know I could put all these in separate code chunks but
-#can't be bothered. note to self though: the green +c lets you add new chunks
+#moved this over to a markdown file from a regular r script, I know I could put all these in separate code chunks and format this as a proper report but it's not something I can be bothered to go back and change; will be a learning lesson for future instead. note to self though: the green +c lets you add new chunks
 
 #read file
 
