@@ -9,6 +9,8 @@ output:
 
 ```{r}
 
+#realising now while I moved this over to markdown for the sake of exercise, the content being more code than prose lends better to an r script
+
 #moved this over to a markdown file from a regular r script, I know I could put all these in separate code chunks and format this as a proper report but it's not something I can be bothered to go back and change; will be a learning lesson for future instead. note to self though: the green +c lets you add new chunks
 
 #ANOTHER NOTE TO SELF: keep markdown documents can be a helpful setting to tick, to allow people to read stuff easily without downloading the full repo
