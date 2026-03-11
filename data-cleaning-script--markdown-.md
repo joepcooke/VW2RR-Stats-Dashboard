@@ -7,8 +7,8 @@ output:
     keep_md: true
 ---
 
-```{r}
 
+``` r
 #moved this over to a markdown file from a regular r script, I know I could put all these in separate code chunks and format this as a proper report but it's not something I can be bothered to go back and change; will be a learning lesson for future instead. note to self though: the green +c lets you add new chunks
 
 #ANOTHER NOTE TO SELF: keep markdown documents can be a helpful setting to tick, to allow people to read stuff easily without downloading the full repo
@@ -18,6 +18,22 @@ output:
 library("readxl")
 library("writexl")
 library("tidyverse")
+```
+
+```
+## ── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
+## ✔ dplyr     1.2.0     ✔ readr     2.2.0
+## ✔ forcats   1.0.1     ✔ stringr   1.6.0
+## ✔ ggplot2   4.0.2     ✔ tibble    3.3.0
+## ✔ lubridate 1.9.5     ✔ tidyr     1.3.2
+## ✔ purrr     1.2.1     
+## ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+## ✖ dplyr::filter() masks stats::filter()
+## ✖ dplyr::lag()    masks stats::lag()
+## ℹ Use the conflicted package (<http://conflicted.r-lib.org/>) to force all conflicts to become errors
+```
+
+``` r
 library("dplyr")
 
 vw2rr_data <- read_excel("data_cols_format.xlsx")
@@ -26,7 +42,29 @@ vw2rr_data <- read_excel("data_cols_format.xlsx")
 
 vw2rr_data %>%
   rename(dex_no = "Dex No.")
+```
 
+```
+## # A tibble: 681 × 16
+##    dex_no Pokemon       HP   Atk   Def   SpA   SpD   Spe Total `Ability 1`
+##    <chr>  <chr>      <dbl> <dbl> <dbl> <dbl> <dbl> <dbl> <dbl> <chr>      
+##  1 #001   Bulbasaur     45    49    49    65    65    45   318 Solar Power
+##  2 #002   Ivysaur       60    62    63    80    80    60   405 Solar Power
+##  3 #003   Venusaur      80    87    85   103   100    80   535 Solar Power
+##  4 #004   Charmander    39    52    43    60    50    65   309 Defiant    
+##  5 #005   Charmeleon    58    64    58    80    65    80   405 Defiant    
+##  6 #006   Charizard     75   101    75   109    75   100   535 Defiant    
+##  7 #007   Squirtle      44    48    65    50    64    43   314 Shell Armor
+##  8 #008   Wartortle     59    63    80    65    80    58   405 Shell Armor
+##  9 #009   Blastoise     79    83   100    90   105    78   535 Shell Armor
+## 10 #010   Caterpie      45    30    35    20    20    45   195 Shield Dust
+## # ℹ 671 more rows
+## # ℹ 6 more variables: `Ability 2` <chr>, `Hidden Ability` <chr>,
+## #   `Type 1` <chr>, `Type 2` <chr>, `Evolution(s)` <chr>,
+## #   `Additional Notes` <chr>
+```
+
+``` r
 new_col_names <- c(dex_no = "Dex No.", name = "Pokemon",
                    hp = "HP", atk = "Atk", def = "Def", sp_atk = "SpA", sp_def = "SpD", 
                    speed = "Spe", bst = "Total", ability_1 = "Ability 1", ability_2 = "Ability 2",

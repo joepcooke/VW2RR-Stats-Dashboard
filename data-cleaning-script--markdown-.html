@@ -357,8 +357,9 @@ display: none;
 </div>
 
 
-<pre class="r"><code>#moved this over to a markdown file from a regular r script, I know I could put all these in separate code chunks but
-#can&#39;t be bothered. note to self though: the green +c lets you add new chunks
+<pre class="r"><code>#moved this over to a markdown file from a regular r script, I know I could put all these in separate code chunks and format this as a proper report but it&#39;s not something I can be bothered to go back and change; will be a learning lesson for future instead. note to self though: the green +c lets you add new chunks
+
+#ANOTHER NOTE TO SELF: keep markdown documents can be a helpful setting to tick, to allow people to read stuff easily without downloading the full repo
 
 #read file
 
@@ -507,8 +508,11 @@ dupe_data_2 &lt;- vw2rr_data_8 %&gt;%
   group_by(dex_no_int) %&gt;%
   filter(n() &gt; 1)
 
+
+#write new data to files (commented out because this has already been done)
+
 #write.csv(vw2rr_data_cleaned,&quot;vw2_redux_cleaned.csv&quot;, row.names = FALSE)
-write_xlsx(vw2rr_data_cleaned, &quot;vw2_redux_cleaned.xlsx&quot;)
+#write_xlsx(vw2rr_data_cleaned, &quot;vw2_redux_cleaned.xlsx&quot;)
 
 #View(dupe_data_2)</code></pre>
 
